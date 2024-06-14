@@ -20,6 +20,10 @@ hexo.extend.filter.register('after_post_render', function(data){
       appendLink = 'index/';
       var endPos = link.lastIndexOf('/');
     }
+    else if(/.*\.html$/.test(link)) {
+      // when permalink is end with xxtitle.html, for example 2019/02/20/xxtitle.html
+      var endPos = link.lastIndexOf('.html');
+    }
     else {
       var endPos = link.length; 
     }
