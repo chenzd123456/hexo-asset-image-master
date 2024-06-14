@@ -1,7 +1,5 @@
 # hexo-asset-image
-官方`hexo-asset-image`插件，在同时使用`hexo-abbrlink`时，会导致图片路径错误。
-
-本插件是基于官方插件1.0.0的修改，为了解决域名是xxx.io的情况下，图片路径会从原本/xxx.jpg变成 /.io/xxx.jpg
+解决官方`hexo-asset-image`插件，在同时使用`hexo-abbrlink`时，会导致图片路径错误。
 
 # Usege
 
@@ -20,10 +18,11 @@
 
    ```sh
    root: /
-   permalink: posts/:abbrlink.html
+   permalink: ":year:month:day/:abbrlink.html"
+   
    pretty_urls:
-     trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-     trailing_html: false # Set to false to remove trailing '.html' from permalinks
+     trailing_index: true # Set to false to remove trailing 'index.html' from permalinks, dont be false, vercel will miss the page
+     trailing_html: true # Set to false to remove trailing '.html' from permalinks, dont be false, vercel will miss the page
    
    abbrlink:
      alg: crc32  # 算法：crc16(default) and crc32
