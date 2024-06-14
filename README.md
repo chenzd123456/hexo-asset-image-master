@@ -10,7 +10,7 @@
 2. 添加依赖
 
    ```sh
-   npm install https://github.com/fulsun/hexo-asset-image-master.git --save
+   npm install https://github.com/chenzd123456/hexo-asset-image-master.git --save
    npm install hexo-abbrlink --save
    ```
 
